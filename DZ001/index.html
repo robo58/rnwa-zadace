@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  background-color:gray;
+  padding:8px;
+  margin-top:7px;
+  width:100%;
+  text-align:center;
+}
+.menu a {
+  color:black;
+  font-size: x-large;
+  margin: 10px 40px 10px;
+}
+.header{
+  background-color:gray;
+  padding:15px;
+  text-align:center;
+}
+.main {
+  float:left;
+  width:80%;
+  margin-bottom: 50px;
+}
+
+.main article{
+  background-color: gray;
+  margin-top: 25px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  color: black;
+  padding-bottom: 15px;
+  
+}
+
+.main article img{
+   border-radius: 50%;
+   width: 50%;
+   margin-left: 10px;
+   margin-top: 10px;
+ 
+}
+
+.main h4{
+  margin-left: 20px;
+  
+}
+
+.main div{
+  display:table-cell;
+ 
+}
+
+div.articleLeft{
+  width: 25%;
+}
+
+
+div.articleRight{
+  width: 75%;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+div.articleRight img{
+  border-radius: 0%;
+  width: 70%;
+}
+
+
+
+.aside {
+  background-color:gray;
+  float:right;
+  width:20%;
+  height: 100%;
+  max-height: 100%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+  color: black;
+}
+
+.aside a {
+  padding-top: 20px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.aside a:hover {
+  color: #f1f1f1;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#profilePic{
+border-radius: 50%;
+width: 85%;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+
+  body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header {
+      width: 100%;
+        order: 1;
+    }
+    .main {
+      width: 100%;
+        order: 2;
+    }
+    .menu {
+      width: 100%;
+        order: 3;
+    }
+    .aside {
+        width: 100%;
+        order: 4;
+    }
+    #profilePic{
+      width: 30%;
+    }
+
+
+    .footer {
+        width: 100%;
+        order: 5;
+    }
+
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div class="header">
+  <h1>Projekt</h1>
+</div>
+
+  <div class="menu">
+    <a href="#" style="color: white;">Naslovnica</a>
+    <a href="#">Kreiraj</a>
+    <a href="#">Profil</a>
+  </div>
+
+  <div class="main">
+
+    <article>
+      <div class="articleLeft">
+      <img src="resources/profile_pic.png">
+      <h4>Marko Marić</h4>
+      </div>
+
+      <div class="articleRight">
+      <p>"Studiranje povijesti na stupnju zanimanja bio mi je zanimljiv od mog prvog sata povijesti u srednjoj školi, jer je to tema koja potiče na raspravu i hrani moju znatiželjnu stranu. Oduvijek me zanimalo što se dogodilo prije nas i kako je to dovelo do mjesta gdje smo sada ..."</p>
+      </div>
+    </article>
+
+      <article>
+      <div class="articleLeft">
+      <img src="resources/profile_pic_2.jpg">
+      <h4>Iva Ivić</h4>
+      </div>
+
+      <div class="articleRight">
+      <p>"Ljudi rođeni 1997. - 2004. posljednji su iz elite"</p>
+      <img src="resources/pic_1.jpg">
+      </div>
+    </article>
+
+      <article>
+      <div class="articleLeft">
+      <img src="resources/profile_pic_3.jpeg">
+      <h4>Luka Lukić</h4>
+      </div>
+
+      <div class="articleRight">
+      <p>"Što umjetnik radi? Crta veze. Veže nevidljive niti između stvari. Zaranja u povijest, bila to povijest čovječanstva, geološka povijest Zemlje ili početak i kraj čitavog kozmosa."</p>
+      </div>
+    </article>
+
+       <article>
+      <div class="articleLeft">
+      <img src="resources/profile_pic_4.jpg">
+      <h4>Petar Perić</h4>
+      </div>
+
+      <div class="articleRight">
+      <p>"Psihologija neprestano pokušava opravdati ljudsku prirodu. Povijest neprestano podriva napore."</p>
+        <img src="resources/pic_2.jpg">
+      </div>
+    </article>
+
+  </div>
+
+  <div class="aside">
+  <img src="resources/profile_pic.png" id="profilePic">
+  <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 25px;">Marko Marić</p>
+  <a href="#">Pošalji povratnu informaciju</a>
+  <a href="#">Postavke</a>
+  <a href="#">Odjava</a>
+  </div>
+
+<div class="footer">Sveučilište u Mostaru</div>
+
+</body>
+</html>
