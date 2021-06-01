@@ -44,20 +44,6 @@ class Post
         return new Post($post['pid'], $post['pcontent'],$post['fullname'], $post['rid'], $post['time']);
     }
 
-    public static function updateorders($post,$productCode,$quantityOrdered,$priceEach,$orderLineNumber) {
-        $db = Db::getInstance();
-        $post = intval($post);
-        $quantityOrdered = intval($quantityOrdered);
-        $priceEach = intval($priceEach);
-        $orderLineNumber = intval($orderLineNumber);
-        $sql="UPDATE orderdetails SET quantityOrdered = '$quantityOrdered', priceEach='$priceEach', orderLineNumber = '$orderLineNumber'
-       WHERE orderNumber = '$post' 
-       AND productCode = '$productCode'";
-        $db->query($sql);
-    }
-
-
-
     public static function save($rid, $pcontent)
     {
         return Database::query("insert into post (pcontent, rid) values ('$pcontent', '$rid')");
@@ -66,6 +52,11 @@ class Post
     public static function update($pid, $rid, $pcontent)
     {
         return Database::query("update post set pcontent = '$pcontent', rid = '$rid' where pid = '$pid'");
+    }
+
+    public static function delete($pid)
+    {
+        return Database::query("delete from post where pid = '$pid'");
     }
 
 

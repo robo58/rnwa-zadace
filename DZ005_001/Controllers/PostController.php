@@ -37,11 +37,14 @@ class PostController extends Controller
     public function update($request)
     {
 
-            $post = Post::update($request['pid'], $request['rid'], $request['pcontent']);
-            if($post){
-                $this->index();
-            }else{
-                $this->edit(['post_id'=>$request['pid']]);
-            }
+        Post::update($request['pid'], $request['rid'], $request['pcontent']);
+
+        $this->edit(['post_id' => $request['pid']]);
+    }
+
+    public function delete($request)
+    {
+        Post::delete($request['post_id']);
+        $this->index();
     }
 }

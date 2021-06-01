@@ -10,7 +10,19 @@
 
     Route::post('posts',[PostController::class, 'store']);
 
-    Route::put('posts',[PostController::class, 'update']);
+    Route::put('posts_update',[PostController::class, 'update']);
+
+    Route::delete('posts_delete',[PostController::class, 'delete']);
+
+    Route::get('groups',[GroupController::class, 'index']);
+    Route::get('groups_create',[GroupController::class, 'create']);
+    Route::get('groups_edit',[GroupController::class, 'edit']);
+
+    Route::post('groups',[GroupController::class, 'store']);
+
+    Route::put('groups_update',[GroupController::class, 'update']);
+
+    Route::delete('groups_delete',[GroupController::class, 'delete']);
 
 
 

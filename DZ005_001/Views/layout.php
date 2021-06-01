@@ -254,6 +254,8 @@
 <div class="menu">
     <a href="posts">Objave</a>
     <a href="posts_create">Nova objava</a>
+    <a href="groups">Grupe</a>
+    <a href="groups_create">Nova grupa</a>
 </div>
 
 <div class="main">

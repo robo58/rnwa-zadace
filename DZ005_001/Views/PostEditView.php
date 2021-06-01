@@ -6,9 +6,9 @@
 ?>
 
 <div class="container">
-    <form action="posts" method="post">
+    <form action="posts_update" method="post">
         <input type="hidden" name="pid" value="<?= $data['post']->post_id ?>">
-        <input type="hidden" name="method" value="PUT">
+        <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="col-25">
                 <label for="rid">Autor</label>
